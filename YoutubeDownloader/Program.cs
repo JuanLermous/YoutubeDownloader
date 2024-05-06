@@ -1,3 +1,5 @@
+using YoutubeDownloader.Models;
+
 namespace YoutubeDownloader
 {
 	internal static class Program
@@ -8,10 +10,10 @@ namespace YoutubeDownloader
 		[STAThread]
 		static void Main()
 		{
-			// To customize application configuration such as set high DPI settings or default font,
-			// see https://aka.ms/applicationconfiguration.
+
+			var informacionVideoModel = new VideoDataModel();
 			ApplicationConfiguration.Initialize();
-			Application.Run(new MainMenu());
+			Application.Run(new MainMenu(informacionVideoModel));
 		}
 	}
 }

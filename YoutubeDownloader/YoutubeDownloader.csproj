@@ -9,6 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FFmpeg.AutoGen" Version="7.0.0" />
+    <PackageReference Include="NReco.VideoConverter" Version="1.2.1" />
     <PackageReference Include="Tulpep.NotificationWindow" Version="1.1.38" />
     <PackageReference Include="YoutubeExplode" Version="6.3.14" />
   </ItemGroup>
