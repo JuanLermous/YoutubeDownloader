@@ -55,7 +55,11 @@ namespace YoutubeDownloader
 		}
 		private void buttonClose_Click(object sender, EventArgs e)
 		{
-			this.Close();
+			DialogResult result = MessageBox.Show("¿Deseas cerrar el programa?", "Usuarios Nuevos", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+			if (result == DialogResult.Yes)
+			{
+				this.Close();
+			}
 		}
 		private void buttonMinimize_Click(object sender, EventArgs e)
 		{

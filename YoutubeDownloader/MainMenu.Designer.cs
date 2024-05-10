@@ -62,10 +62,12 @@
 			label4 = new Label();
 			button1 = new Button();
 			labelDescargas = new Label();
+			label5 = new Label();
 			tabControl1.SuspendLayout();
 			tabBuscar.SuspendLayout();
 			groupBoxInformacionBusqueda.SuspendLayout();
 			panelRadioButtons.SuspendLayout();
+			tabDescargas.SuspendLayout();
 			panelToolBar.SuspendLayout();
 			panel1.SuspendLayout();
 			SuspendLayout();
@@ -358,6 +360,7 @@
 			// 
 			// tabDescargas
 			// 
+			tabDescargas.Controls.Add(label5);
 			tabDescargas.Location = new Point(4, 24);
 			tabDescargas.Margin = new Padding(3, 2, 3, 2);
 			tabDescargas.Name = "tabDescargas";
@@ -527,6 +530,17 @@
 			labelDescargas.TextAlign = ContentAlignment.MiddleRight;
 			labelDescargas.Click += labelDescargas_Click;
 			// 
+			// label5
+			// 
+			label5.BackColor = Color.Transparent;
+			label5.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			label5.ForeColor = Color.Black;
+			label5.Location = new Point(199, 97);
+			label5.Name = "label5";
+			label5.Size = new Size(303, 28);
+			label5.TabIndex = 1;
+			label5.Text = "Work in progess..";
+			// 
 			// MainMenu
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
@@ -549,6 +563,7 @@
 			groupBoxInformacionBusqueda.PerformLayout();
 			panelRadioButtons.ResumeLayout(false);
 			panelRadioButtons.PerformLayout();
+			tabDescargas.ResumeLayout(false);
 			panelToolBar.ResumeLayout(false);
 			panel1.ResumeLayout(false);
 			ResumeLayout(false);
@@ -588,5 +603,6 @@
 		public TabControl tabControl1;
 		private Button button2;
 		private Label label4;
+		private Label label5;
 	}
 }

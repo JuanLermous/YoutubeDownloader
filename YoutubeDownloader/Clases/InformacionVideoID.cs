@@ -11,10 +11,12 @@ namespace YoutubeDownloader.Clases
             this._ModeloInformacion = ModeloMainMenu;
 			this._youtubeClient = new YoutubeClient();
 		}
+
 		public async Task ObtenerInformacionDelVideoAsync(string videoID)
 		{
 			try
 			{
+				Notificaciones.Exito("Buscando...");
 				var video = await _youtubeClient.Videos.GetAsync(videoID);
 				if (video != null)
 				{
@@ -45,36 +47,3 @@ namespace YoutubeDownloader.Clases
 		}
 	}
 }
-//_ModeloInformacion.Id = InformacionVideoID.ExtraerIdVideo(textBoxUrl.Trim());
-//if (_ModeloInformacion.Id == null)
-//{
-//	Notificaciones.Error("Error al convertir la URL");
-//	return;
-//}
-//try
-//{
-//	await InformacionDelVideo();
-//}
-//catch (Exception ex)
-//{
-//	Notificaciones.Error("Error al obtener la información del video: " + ex.Message);
-//}
-
-
-//public async Task InformacionDelVideo()
-//{
-//	var videoInfo = await youtubeClient.Videos.GetAsync(_ModeloInformacion.Id);
-//	if (videoInfo == null)
-//	{
-//		Notificaciones.Error("No se pudo obtener la información del video");
-//		return;
-//	}
-//	Notificaciones.Exito("Información obtenida");		
-//	_ModeloInformacion.Title = videoInfo.Title;
-//	_ModeloInformacion.Author = videoInfo.Author.ToString();
-//	_ModeloInformacion.Duration = videoInfo.Duration.ToString();
-//	var streamManifest = await youtubeClient.Videos.Streams.GetManifestAsync(_ModeloInformacion.Id);
-//	var streamInfo = streamManifest.GetAudioOnlyStreams().GetWithHighestBitrate();
-//	_ModeloInformacion.TamañoMB = streamInfo.ToString();
-
-//}
