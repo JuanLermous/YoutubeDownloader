@@ -14,8 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="NAudio" Version="2.2.1" />
-    <PackageReference Include="NReco.VideoConverter" Version="1.2.1" />
     <PackageReference Include="Tulpep.NotificationWindow" Version="1.1.38" />
     <PackageReference Include="YoutubeExplode" Version="6.3.14" />
   </ItemGroup>

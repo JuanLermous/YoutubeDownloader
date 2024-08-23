@@ -18,6 +18,7 @@ namespace YoutubeDownloader.Clases
 			{
 				Notificaciones.Exito("Buscando...");
 				var video = await _youtubeClient.Videos.GetAsync(videoID);
+
 				if (video != null)
 				{
 											
@@ -25,6 +26,7 @@ namespace YoutubeDownloader.Clases
 					_ModeloInformacion.Title = video.Title;
 					_ModeloInformacion.Author = video.Author.ToString();
 					_ModeloInformacion.Duration = video.Duration.ToString();
+		
 					Notificaciones.Exito("Informacion del Video Obtenida");
 				}
 				else
